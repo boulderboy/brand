@@ -11,6 +11,12 @@
     transform-origin: 0% 0%;
   }
 }
+.test-block {
+  height: 50px;
+  width: 50px;
+  background-color: aqua;
+}
+
 .header-container {
   display: flex;
   justify-content: space-between;
@@ -193,6 +199,7 @@
   border-radius: 5px;
   padding: 21px 16px;
   border: 1px solid #e6e6e6;
+  min-width: 145px;
 }
 .hidden-cart .mega-pointer {
   left: 15px;
