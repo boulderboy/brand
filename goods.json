@@ -1,65 +1,102 @@
-[
-  {
-    "id": "1",
-    "title": "MANGO PEOPLE T-SHIRT",
-    "href": "#",
-    "price": "52",
-    "img_src": "img/cat-1"
-  },
-  {
-    "id": "2",
-    "title": "MANGO PEOPLE T-SHIRT",
-    "href": "#",
-    "price": "52",
-    "img_src": "img/cat-2"
-  },
-  {
-    "id": "3",
-    "title": "MANGO PEOPLE T-SHIRT",
-    "href": "#",
-    "price": "52",
-    "img_src": "img/cat-3"
-  },
-  {
-    "id": "4",
-    "title": "MANGO PEOPLE T-SHIRT",
-    "href": "#",
-    "price": "52",
-    "img_src": "img/cat-4"
-  },
-  {
-    "id": "5",
-    "title": "MANGO PEOPLE T-SHIRT",
-    "href": "#",
-    "price": "52",
-    "img_src": "img/cat-5"
-  },
-  {
-    "id": "6",
-    "title": "MANGO PEOPLE T-SHIRT",
-    "href": "#",
-    "price": "52",
-    "img_src": "img/cat-6"
-  },
-  {
-    "id": "7",
-    "title": "MANGO PEOPLE T-SHIRT",
-    "href": "#",
-    "price": "52",
-    "img_src": "img/cat-7"
-  },
-  {
-    "id": "8",
-    "title": "MANGO PEOPLE T-SHIRT",
-    "href": "#",
-    "price": "52",
-    "img_src": "img/cat-8"
-  },
-  {
-    "id": "9",
-    "title": "MANGO PEOPLE T-SHIRT",
-    "href": "#",
-    "price": "52",
-    "img_src": "img/cat-9"
-  }
-]
+{
+  "cart": [
+    {
+      "imgForCartSrc": "img/minis-for-cart/cat-2.jpg",
+      "title": "MANGO PEOPLE T-SHIRT",
+      "price": "52",
+      "id": 1
+    },
+    {
+      "imgForCartSrc": "img/minis-for-cart/cat-2.jpg",
+      "title": "MANGO PEOPLE T-SHIRT",
+      "price": "52",
+      "id": 2
+    },
+    {
+      "imgForCartSrc": "img/minis-for-cart/cat-3.jpg",
+      "title": "MANGO PEOPLE T-SHIRT",
+      "price": "52",
+      "id": 3
+    },
+    {
+      "imgForCartSrc": "img/minis-for-cart/cat-9.jpg",
+      "title": "MANGO PEOPLE T-SHIRT",
+      "price": "52",
+      "id": 4
+    }
+  ],
+  "goods": [
+    {
+      "id": "1",
+      "title": "MANGO PEOPLE T-SHIRT",
+      "href": "#",
+      "price": "52",
+      "img_src": "img/cat-1",
+      "imgForCartSrc": "img/minis-for-cart/cat-1.jpg"
+    },
+    {
+      "id": "2",
+      "title": "MANGO PEOPLE T-SHIRT",
+      "href": "#",
+      "price": "52",
+      "img_src": "img/cat-2",
+      "imgForCartSrc": "img/minis-for-cart/cat-2.jpg"
+    },
+    {
+      "id": "3",
+      "title": "MANGO PEOPLE T-SHIRT",
+      "href": "#",
+      "price": "52",
+      "img_src": "img/cat-3",
+      "imgForCartSrc": "img/minis-for-cart/cat-3.jpg"
+    },
+    {
+      "id": "4",
+      "title": "MANGO PEOPLE T-SHIRT",
+      "href": "#",
+      "price": "52",
+      "img_src": "img/cat-4",
+      "imgForCartSrc": "img/minis-for-cart/cat-4.jpg"
+    },
+    {
+      "id": "5",
+      "title": "MANGO PEOPLE T-SHIRT",
+      "href": "#",
+      "price": "52",
+      "img_src": "img/cat-5",
+      "imgForCartSrc": "img/minis-for-cart/cat-5.jpg"
+    },
+    {
+      "id": "6",
+      "title": "MANGO PEOPLE T-SHIRT",
+      "href": "#",
+      "price": "52",
+      "img_src": "img/cat-6",
+      "imgForCartSrc": "img/minis-for-cart/cat-6.jpg"
+    },
+    {
+      "id": "7",
+      "title": "MANGO PEOPLE T-SHIRT",
+      "href": "#",
+      "price": "52",
+      "img_src": "img/cat-7",
+      "imgForCartSrc": "img/minis-for-cart/cat-7.jpg"
+    },
+    {
+      "id": "8",
+      "title": "MANGO PEOPLE T-SHIRT",
+      "href": "#",
+      "price": "52",
+      "img_src": "img/cat-8",
+      "imgForCartSrc": "img/minis-for-cart/cat-8.jpg"
+    },
+    {
+      "id": "9",
+      "title": "MANGO PEOPLE T-SHIRT",
+      "href": "#",
+      "price": "52",
+      "img_src": "img/cat-9",
+      "imgForCartSrc": "img/minis-for-cart/cat-9.jpg"
+    }
+  ]
+}
