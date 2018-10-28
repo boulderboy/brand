@@ -1,18 +1,17 @@
 "use strict";
 
 var $container = document.querySelector('.catalog-product-block');
-console.log($container);
+
 
 var xhr = new XMLHttpRequest();
 
-xhr.open('GET', 'http://127.0.0.1:8080/goods.json');
+xhr.open('GET', 'http://localhost:3000/goods');
 xhr.send();
 
 xhr.onreadystatechange = function (){
     if(xhr.readyState === XMLHttpRequest.DONE){
         if(xhr.status === 200){
             var goods = JSON.parse(xhr.responseText);
-            console.log(goods);
             goods.forEach(function (card) {
                 var hoverBlock = document.createElement('div');
                 hoverBlock.classList.add('product-hover');
@@ -33,6 +32,9 @@ xhr.onreadystatechange = function (){
                 cartLink.href = '#';
                 cartLink.classList.add('add-to-cart');
                 cartLink.textContent = 'add to cart';
+                cartLink.dataset.price = card.price;
+                cartLink.dataset.title = card.title;
+                cartLink.dataset.imgForCartSrc = card.imgForCartSrc;
                 // var cartIcon = document.createElement('i');
                 // cartIcon.classList.add('fas fa-shopping-cart');
 
