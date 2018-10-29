@@ -1,8 +1,9 @@
 "use strict";
 
-function renderItem(imgSrc, title, price) {
+function renderItem(imgSrc, title, price, id, quantity) {
     var $blockOfGood = $('<div />');
     $blockOfGood.addClass('hidden-prod');
+    $blockOfGood.data('id');
     var $prodImg = $(`<img src="${imgSrc}">`);
     var $prodRating = $('<div />');
     $prodRating.addClass('hidden-prod-rating');
@@ -11,26 +12,30 @@ function renderItem(imgSrc, title, price) {
     var $stars = $('<img src="img/stars.png">');
     var $quantity = $('<span />');
     $quantity.addClass('hidden-cart-price');
-    $quantity.text(`1 x ${price}$`);
-    var $deleteProd = $('<i class="fas fa-times-circle remove"></i>');
+    $quantity.text(`${quantity} x ${price}$ = ${quantity*price}$`);
+    var $deleteProd = $('<i />',{
+        class: "fas fa-times-circle remove",
+        'data-id': id,
+        'data-quantity': quantity,
+    });
     $prodRating.append($title, $stars, $quantity);
     $blockOfGood.append($prodImg, $prodRating, $deleteProd);
     $('#cart-block').append($blockOfGood);
 }
 
 function cartRender() {
-    var _cart = [];
     $.ajax({
         url: 'http://localhost:3000/cart',
         type: 'GET',
         success: function (cart) {
             if (cart.length === 0) {
-                $('#cart-block').append($('<span>Your cart is empty</span>'))
+                $('#cart-block').empty();
+                $('#cart-block').append($('<span>Your cart is empty</span>'));
             } else {
                 var totalPrice = null;
                 $('#cart-block').empty();
                 cart.forEach(function (product) {
-                    renderItem(product.imgForCartSrc, product.title, product.price);
+                    renderItem(product.imgForCartSrc, product.title, product.price, product.id, product.quantity);
                     totalPrice += +product.price;
                 });
 
@@ -46,6 +51,7 @@ function cartRender() {
             $('#cart-block').append($checkoutBtn, $goToCartBtn);
             }
         }
+
     })
 }
 
@@ -55,18 +61,38 @@ function cartRender() {
         $('.catalog-product-block').on('click', '.add-to-cart', function (event) {
             event.preventDefault();
             var product = $(this).data();
-            $.ajax({
-                url: 'http://localhost:3000/cart',
-                type: 'POST',
-                data: product,
-                success: function () {
-                    console.log('ok');
-                }
-            });
+            if($('#cart-block .remove[data-id = ' + product.id + ']').length){
+                var productDataList = $('#cart-block .remove[data-id = ' + product.id + ']').data();
+                $.ajax({
+                    url: 'http://localhost:3000/cart/' + product.id,
+                    type: 'PATCH',
+                    data: {"quantity": +productDataList.quantity + 1},
+                    success: function () {
+                        cartRender()
+                    }
+                })
+            }   else {
+                $.ajax({
+                    url: 'http://localhost:3000/cart',
+                    type: 'POST',
+                    data: product,
+                    success: function () {
+                        console.log('ok');
+                    }
+                });
+            }
+
             cartRender();
-        }
-        $('#cart-block').on('click', '.remove', function () {
-            
+        })
+        $('#cart-block').on('click', '.remove', function (event) {
+            var product = $(this).data();
+            $.ajax({
+                url: 'http://localhost:3000/cart/' + product.id,
+                type: 'DELETE',
+                success: function () {
+                    cartRender();
+                }
+            })
         })
     })
 })(jQuery);
