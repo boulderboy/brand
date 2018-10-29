@@ -34,6 +34,8 @@ xhr.onreadystatechange = function (){
                 cartLink.textContent = 'add to cart';
                 cartLink.dataset.price = card.price;
                 cartLink.dataset.title = card.title;
+                cartLink.dataset.id = card.id;
+                cartLink.dataset.quantity = 1;
                 cartLink.dataset.imgForCartSrc = card.imgForCartSrc;
                 // var cartIcon = document.createElement('i');
                 // cartIcon.classList.add('fas fa-shopping-cart');
