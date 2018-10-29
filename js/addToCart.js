@@ -36,7 +36,7 @@ function cartRender() {
                 $('#cart-block').empty();
                 cart.forEach(function (product) {
                     renderItem(product.imgForCartSrc, product.title, product.price, product.id, product.quantity);
-                    totalPrice += +product.price;
+                    totalPrice += +product.price * product.quantity;
                 });
 
             var $totalBlock = $('<div />');
