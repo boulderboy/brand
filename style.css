@@ -139,9 +139,6 @@
   text-decoration: none;
   transition-duration: 300ms;
 }
-.header__right .my-account:hover {
-  background-color: #d05656;
-}
 .header__right span {
   margin-right: 15px;
 }
@@ -304,6 +301,52 @@
 }
 .hidden-goto:hover {
   background-color: #eaeaea;
+}
+
+.account:hover .login-block {
+  display: block;
+}
+
+.account:hover .my-account {
+  background-color: #d05656;
+}
+
+.login-block {
+  z-index: 2;
+  display: none;
+  position: absolute;
+  left: 65px;
+  color: #9f9f9f;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 21px 16px;
+  border: 1px solid #e6e6e6;
+  min-width: 145px;
+}
+.login-block .login-input {
+  height: 30px;
+  padding-left: 7px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+.login-block button {
+  display: flex;
+  width: 190px;
+  margin-top: 30px;
+  padding: 12px 0;
+  justify-content: center;
+  border: 1px solid #f16d7f;
+  color: #f16d7f;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition-duration: 300ms;
+  cursor: pointer;
+}
+.login-block button:hover {
+  background-color: #f16d7f;
+  color: #ffffff;
 }
 
 .menu {
@@ -1105,6 +1148,117 @@ input[type=number]:focus {
   font-size: 24px;
   font-weight: 900;
   margin-bottom: 72px;
+}
+
+.review-container {
+  margin-top: 25px;
+  border-top: 1px solid #9f9f9f;
+  padding-top: 15px;
+  color: #222222;
+}
+.review-container .product-info {
+  display: flex;
+  margin-top: 15px;
+}
+.review-container .product-info .rating-from-user {
+  color: gold;
+}
+.review-container .product-info .review-color {
+  margin: 0 15px 0 15px;
+}
+.review-container .review-text {
+  margin-left: 30px;
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.review-container #review-color {
+  color: green;
+}
+
+.reviews button {
+  outline: none;
+  margin-right: 45px;
+  cursor: pointer;
+  padding: 10px;
+  border-style: solid;
+  border-width: 1px;
+  background-color: #ffffff;
+  border-color: #ef5b70;
+  color: #ef5b70;
+  font-size: 16px;
+  font-weight: 700;
+}
+.reviews button:hover {
+  background-color: #f16d7f;
+  color: #fff;
+}
+
+.reviews input {
+  outline: none;
+}
+
+.review-text-input {
+  width: 100px;
+  height: 120px;
+}
+
+.send-review {
+  display: flex;
+  position: relative;
+}
+.send-review:hover .speech-bubble {
+  display: flex;
+}
+
+.review-about-product {
+  display: flex;
+  justify-content: space-between;
+}
+
+.speech-bubble {
+  z-index: 2;
+  position: absolute;
+  left: 133px;
+  top: -180px;
+  display: none;
+  flex-direction: column;
+  border-radius: 0.4em;
+  width: 250px;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #9f9f9f;
+  color: #222222;
+}
+.speech-bubble:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 24px solid transparent;
+  border-right-color: #9f9f9f;
+  border-left: 0;
+  margin-top: -24px;
+  margin-left: -24px;
+}
+.speech-bubble .stars-block {
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+.speech-bubble .stars-block i {
+  cursor: pointer;
+}
+.speech-bubble .review-about-product {
+  margin-bottom: 10px;
+}
+.speech-bubble textarea {
+  margin-bottom: 15px;
+  outline: none;
+}
+.speech-bubble select {
+  outline: none;
 }
 
 .catalog-content {
