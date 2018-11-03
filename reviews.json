@@ -1,0 +1,13 @@
+{
+  "reviews": [
+    {
+      "id": "1",
+      "user": "Alla",
+      "rating": "4",
+      "color": "Red",
+      "size": "S",
+      "useful": "0",
+      "unuseful": "0"
+    }
+  ]
+}
