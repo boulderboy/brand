@@ -1,13 +1,5 @@
 {
-  "cart": [
-    {
-      "imgForCartSrc": "img/minis-for-cart/cat-6.jpg",
-      "quantity": "3",
-      "id": "6",
-      "title": "MANGO PEOPLE T-SHIRT",
-      "price": "52"
-    }
-  ],
+  "cart": [],
   "goods": [
     {
       "id": "1",
