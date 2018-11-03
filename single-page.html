@@ -540,6 +540,43 @@
 			</div>
 		</div>
 	</section>
+	<section class="container reviews" id="reviews">
+		<div class="send-review">
+			<button>Send review</button>
+			<form action="send">
+				<div class="speech-bubble">
+					Name:
+					<input type="text" id="review-user-name">
+					<div class="stars-block">
+						Rating:
+						<i class="far fa-star rating-star" data-rating="1"></i>
+						<i class="far fa-star rating-star" data-rating="2"></i>
+						<i class="far fa-star rating-star" data-rating="3"></i>
+						<i class="far fa-star rating-star" data-rating="4"></i>
+						<i class="far fa-star rating-star" data-rating="5"></i>
+					</div>
+					<div class="review-about-product">
+						<select size="1" name="color" id="review-color">
+							<option selected disabled>Choose color</option>
+							<option value="Red">Red</option>
+							<option value="Green">Green</option>
+							<option value="Blue">Blue</option>
+						</select><br>
+						<select name="size" size="1" id="review-size">
+							<option selected disabled>Choose size</option>
+							<option value="S">S</option>
+							<option value="M">M</option>
+							<option value="L">L</option>
+						</select>
+					</div>
+					Your review:
+					<textarea name="review" id="" cols="30" rows="10" id="review-text"></textarea>
+					<button type="submit" id="send-review">Send</button>
+				</div>
+
+			</form>
+		</div>
+	</section>
 	<section class="subscribe">
 		<div class="container subscribe-container">
 			<div class="response">
@@ -625,6 +662,8 @@
 		</div>
 	</div>
 </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="js/reviewRender.js"></script>
 </body>
 
 </html>
