@@ -14,8 +14,8 @@ function renderReview(review) {
     var $productInfo = $('<div />');
     $productInfo.addClass('product-info');
     var $ratingFromUser = $('<div />').addClass('rating-from-user');
-    for(var i = 0; i < 5; i++){
-        if(i < review.rating) {
+    for (var i = 0; i < 5; i++) {
+        if (i < review.rating) {
             $ratingFromUser.append($('<i class="fas fa-star"></i>'));
         } else {
             $ratingFromUser.append($('<i class="far fa-star"></i>'));
@@ -50,22 +50,32 @@ function renderAllReviews() {
 }
 
 (function ($) {
+
     renderAllReviews();
     var idCounter = 0;
+    $.ajax({
+        url: 'http://localhost:4000/reviews',
+        type: 'GET',
+        success: function (reviews) {
+            idCounter = reviews[reviews.length - 1].id;
+        }
+
+    });
+    var rating = 0;
     $('#send-review').on('click', function (event) {
         event.preventDefault();
         var review = {};
         idCounter++;
         review.id = idCounter;
         review.user = $('#review-user-name').val();
-        review.rating = 4;
+        review.rating = rating;
         review.color = $('#review-color').val();
         review.size = $('#review-size').val();
         review.useful = 0;
         review.unuseful = 0;
         review.text = $('#review-text').val();
         $.ajax({
-            url:'http://localhost:4000/reviews',
+            url: 'http://localhost:4000/reviews',
             type: 'POST',
             data: review,
             success: function () {
@@ -75,7 +85,21 @@ function renderAllReviews() {
                 $('#review-text').val('');
                 renderAllReviews();
             }
-    })
+        })
 
-    })
+    });
+
+    $('#stars-block').on('click', 'i',function (event) {
+      $('.rating-star').each(function (i, elem) {
+          if(elem.dataset.rating <= event.currentTarget.dataset.rating){
+              elem.classList.remove('far');
+              elem.classList.add('golden-star', 'fas');
+          } else {
+              elem.classList.remove('golden-star', 'fas');
+              elem.classList.add('far');
+          }
+          rating = event.currentTarget.dataset.rating;
+      })
+    });
 })(jQuery);
+
