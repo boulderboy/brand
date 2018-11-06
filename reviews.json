@@ -2,12 +2,13 @@
   "reviews": [
     {
       "id": "1",
-      "user": "Alla",
+      "user": "aa",
       "rating": "4",
       "color": "Red",
       "size": "S",
       "useful": "0",
-      "unuseful": "0"
+      "unuseful": "0",
+      "text": "sdf"
     }
   ]
 }
