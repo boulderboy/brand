@@ -4,6 +4,7 @@
 <head>
 	<link rel="stylesheet" href="normalize.css">
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
 	<meta charset="UTF-8">
 	<title>Brand</title>
@@ -431,9 +432,11 @@
 				</nav>
 		</div>
 	</section>
-	<div class="prod-img-slider">
+
+<div class="prod-img-slider">
     <a href="#" class="arrow">&#5176;</a>
-		<img src="img/product-img.jpg" alt="product">
+		<img src="img/product-img.jpg" alt="product" class="hide-img">
+		<img src="img/product-img.jpg" alt="product" class="show-img">
       <a href="#" class="arrow">&#5171;</a>
 	</div>
 	<div class="container prod-description-container">
@@ -547,7 +550,7 @@
 				<div class="speech-bubble">
 					Name:
 					<input type="text" id="review-user-name">
-					<div class="stars-block">
+					<div id="stars-block">
 						Rating:
 						<i class="far fa-star rating-star" data-rating="1"></i>
 						<i class="far fa-star rating-star" data-rating="2"></i>
@@ -570,7 +573,7 @@
 						</select>
 					</div>
 					Your review:
-					<textarea name="review" id="" cols="30" rows="10" id="review-text"></textarea>
+					<textarea name="review" cols="30" rows="10" id="review-text"></textarea>
 					<button type="submit" id="send-review">Send</button>
 				</div>
 
@@ -663,7 +666,9 @@
 	</div>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="js/reviewRender.js"></script>
+<script src="js/slider.js"></script>
 </body>
 
 </html>
