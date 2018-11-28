@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "login": "Ivan",
+      "email": "admin@admin.ru",
+      "password": "admin"
+    },
+    {
+      "name": "qqqq",
+      "login": "Ivan1",
+      "email": "gl.andrewmess@gmail.com",
+      "password": "1",
+      "id": "100"
+    }
+  ]
+}
