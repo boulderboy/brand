@@ -25,7 +25,7 @@ function renderItem(imgSrc, title, price, id, quantity) {
 
 function cartRender() {
     $.ajax({
-        url: 'http://localhost:3000/cart',
+        url: 'http://localhost:3001/cart',
         type: 'GET',
         success: function (cart) {
             if (cart.length === 0) {
@@ -64,7 +64,7 @@ function cartRender() {
             if($('#cart-block .remove[data-id = ' + product.id + ']').length){
                 var productDataList = $('#cart-block .remove[data-id = ' + product.id + ']').data();
                 $.ajax({
-                    url: 'http://localhost:3000/cart/' + product.id,
+                    url: 'http://localhost:3001/cart/' + product.id,
                     type: 'PATCH',
                     data: {"quantity": +productDataList.quantity + 1},
                     success: function () {
@@ -73,7 +73,7 @@ function cartRender() {
                 })
             }   else {
                 $.ajax({
-                    url: 'http://localhost:3000/cart',
+                    url: 'http://localhost:3001/cart',
                     type: 'POST',
                     data: product,
                     success: function () {
@@ -87,7 +87,7 @@ function cartRender() {
         $('#cart-block').on('click', '.remove', function (event) {
             var product = $(this).data();
             $.ajax({
-                url: 'http://localhost:3000/cart/' + product.id,
+                url: 'http://localhost:3001/cart/' + product.id,
                 type: 'DELETE',
                 success: function () {
                     cartRender();
