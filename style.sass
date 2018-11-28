@@ -50,6 +50,9 @@ summary::after
 details[open] > summary::after
   content: '\25BE'
 
+input
+  outline: none
+
 .featured
   margin-top: 80px
   &__top
@@ -903,3 +906,47 @@ input[type="number"]:focus
 
 .show-img
   display: none
+.register-page
+  h3
+    font-size: 24px
+    font-weight: 400
+    text-transform: uppercase
+    color: #f16d7f
+    margin-bottom: 20px
+.registration
+  display: flex
+  flex-direction: column
+  margin-top: 50px
+  input
+    outline: none
+    padding: 7px
+    width: 400px
+    margin-bottom: 20px
+    margin-top: 7px
+  .form-warning
+    margin-top: -9px
+    margin-bottom: 7px
+    color: $pink-text
+  button
+    outline: none
+    width: 137px
+    height: 55px
+    margin-top: 28px
+    margin-bottom: 122px
+    cursor: pointer
+    justify-content: center
+    display: flex
+    align-items: center
+    border-style: solid
+    border-width: 1px
+    background-color: #ffffff
+    border-color: #ef5b70
+    color: #ef5b70
+    font-size: 16px
+    font-weight: 700
+    transition: all 300ms
+    &:hover
+      background-color: $pink-text
+      color: white
+.invalid
+  border-color: $pink-text
