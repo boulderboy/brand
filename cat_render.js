@@ -5,12 +5,13 @@ var $container = document.querySelector('.catalog-product-block');
 
 var xhr = new XMLHttpRequest();
 
-xhr.open('GET', 'http://localhost:3000/goods');
+xhr.open('GET', 'http://localhost:3001/goods');
 xhr.send();
 
-xhr.onreadystatechange = function (){
-    if(xhr.readyState === XMLHttpRequest.DONE){
-        if(xhr.status === 200){
+
+xhr.onreadystatechange = function () {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+        if (xhr.status === 200) {
             var goods = JSON.parse(xhr.responseText);
             goods.forEach(function (card) {
                 var hoverBlock = document.createElement('div');
@@ -41,14 +42,14 @@ xhr.onreadystatechange = function (){
                 // cartIcon.classList.add('fas fa-shopping-cart');
 
                 // cartLink.appendChild(cartIcon);
-               prodText.appendChild(prodTitle);
-               prodText.appendChild(prodPrice);
-               link.appendChild(image);
-               link.appendChild(prodText);
-               prodHover.appendChild(cartLink);
-               hoverBlock.appendChild(link);
-               hoverBlock.appendChild(prodHover);
-               $container.appendChild(hoverBlock);
+                prodText.appendChild(prodTitle);
+                prodText.appendChild(prodPrice);
+                link.appendChild(image);
+                link.appendChild(prodText);
+                prodHover.appendChild(cartLink);
+                hoverBlock.appendChild(link);
+                hoverBlock.appendChild(prodHover);
+                $container.appendChild(hoverBlock);
 
             })
         }
