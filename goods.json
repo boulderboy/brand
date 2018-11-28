@@ -1,5 +1,27 @@
 {
-  "cart": [],
+  "cart": [
+    {
+      "imgForCartSrc": "img/minis-for-cart/cat-1.jpg",
+      "quantity": "1",
+      "id": "1",
+      "title": "MANGO PEOPLE T-SHIRT",
+      "price": "52"
+    },
+    {
+      "imgForCartSrc": "img/minis-for-cart/cat-2.jpg",
+      "quantity": "1",
+      "id": "2",
+      "title": "MANGO PEOPLE T-SHIRT",
+      "price": "52"
+    },
+    {
+      "imgForCartSrc": "img/minis-for-cart/cat-3.jpg",
+      "quantity": "1",
+      "id": "3",
+      "title": "MANGO PEOPLE T-SHIRT",
+      "price": "52"
+    }
+  ],
   "goods": [
     {
       "id": "1",
