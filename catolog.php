@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,6 +50,7 @@
                 </button>
             </form>
         </div>
+
         <div class="header__right">
             <div class="cart-hover">
                 <a href="#" class="cart-icon"><img src="img/cart.svg" alt="cart"></a>
@@ -56,6 +58,7 @@
                     <!--<span>Your cart is empty</span>-->
                 <!--</div>-->
                 <div class="hidden-cart" id="cart-block">
+                    <? cartRender(); ?>
                     <!--<div class="mega-pointer"></div>-->
                     <!--<div class="hidden-prod">-->
                         <!--<img src="img/hidden-prod=1.jpg" alt="men shirt">-->
@@ -535,7 +538,14 @@
 
       </div>
       <div class="select-page">
-        <div class="page-numbers"></div>
+        <div>
+            <ul class="pagination">
+                <li><a href="#" class="active">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+            </ul>
+        </div>
         <div class="view-all">
           <a href="#">view all</a>
         </div>
